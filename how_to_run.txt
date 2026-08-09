@@ -20,8 +20,3 @@
 4. Run command: uv sync
 5. Create folder src/docs and add your pdf files here.
 6. Run command: uv run rag-assistant
-7. If you want to use Anthropic:
-    under rag.py file comment the line 
-    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
-    and uncomment the line 
-    llm = ChatAnthropic(model="claude-3-5-sonnet-20240620", temperature=0.3)
