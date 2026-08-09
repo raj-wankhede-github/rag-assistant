@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# Local Vector Database Files
+chroma_db/*
+
+# Local data / Documents folder
+src/docs/*
+
+# API Keys and Private Environmental Secrets
+.env

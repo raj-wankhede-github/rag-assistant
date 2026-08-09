@@ -1,0 +1,27 @@
+1. Install UV if not already done. Below command to run from Windows Powershell, make sure that installation directory is added to System Environmental Path:
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+2. Run command: uv init . 
+
+3. Edit pyproject.toml file to add dependencies.
+        dependencies = [
+            "chromadb>=0.5.0",
+            "langchain>=0.3.0",
+            "langchain-anthropic>=0.3.0",
+            "langchain-community>=0.3.0",
+            "langchain-huggingface>=0.1.0",
+            "langchain-openai>=1.4.2",
+            "langchain-text-splitters>=0.3.0",
+            "pypdf>=5.0.0",
+            "python-dotenv>=1.0.1",
+            "sentence-transformers>=3.0.0",
+            "tiktoken>=0.8.0",
+        ]
+4. Run command: uv sync
+5. Create folder src/docs and add your pdf files here.
+6. Run command: uv run rag-assistant
+7. If you want to use Anthropic:
+    under rag.py file comment the line 
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+    and uncomment the line 
+    llm = ChatAnthropic(model="claude-3-5-sonnet-20240620", temperature=0.3)

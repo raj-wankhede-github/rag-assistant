@@ -1,0 +1,29 @@
+[project]
+name = "rag-assistant"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "raj-wankhede-github", email = "krazzzy.raj.7@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "chromadb>=0.5.0",
+    "langchain>=0.3.0",
+    "langchain-anthropic>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-huggingface>=0.1.0",
+    "langchain-openai>=1.4.2",
+    "langchain-text-splitters>=0.3.0",
+    "pypdf>=5.0.0",
+    "python-dotenv>=1.0.1",
+    "sentence-transformers>=3.0.0",
+    "tiktoken>=0.8.0",
+]
+
+[project.scripts]
+rag-assistant = "rag_assistant.rag:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
